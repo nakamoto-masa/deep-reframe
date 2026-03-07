@@ -3,9 +3,9 @@ name: deep-reframe
 description: Reframe deep tech messaging from technology-centric to value-centric. Accepts any source material — repositories, websites, technical notes, proposals, pitch decks — and guides users through diagnosis of current messaging maturity, rewriting, and verification. Trigger when user mentions rewriting tech messaging, improving positioning, fixing website copy, creating customer-facing content from a repo or technical notes, or making their technology story more compelling.
 ---
 
-# Deep Reframe — ディープテック・メッセージング変換
+# Deep Reframe — 技術の"伝わらない"を解決する
 
-ディープテック企業の技術者が、自社技術の「見せ方」を継続的に改善するためのSkill。リポジトリ・サイト・技術メモなど素材を渡すと、対話的にガイドしながら価値創造のメッセージングに変換する。
+ディープテック企業の技術者が、自社技術の「見せ方」を継続的に改善するためのSkill。リポジトリ・サイト・技術メモなど素材を渡すと、技術の価値が伝わるメッセージングに磨き上げる。
 
 ## このワークフローを提案するタイミング
 
