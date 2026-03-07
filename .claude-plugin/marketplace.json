@@ -1,0 +1,13 @@
+{
+  "name": "deep-reframe",
+  "owner": {
+    "name": "masahiro"
+  },
+  "plugins": [
+    {
+      "name": "deep-reframe",
+      "source": "./",
+      "description": "ディープテック企業の技術メッセージングを「技術中心」から「価値中心」に変換する。メッセージング成熟度の診断と、顧客価値ドリブンなコンテンツへの変換をガイド付きワークフローで実施。"
+    }
+  ]
+}

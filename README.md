@@ -15,11 +15,21 @@
 
 ## インストール
 
-```bash
-claude plugin install <GitHubリポジトリURL>
+Claude Code内で以下を実行:
+
+```
+/plugin marketplace add nakamoto-masa/deep-reframe
+/plugin install deep-reframe@deep-reframe
 ```
 
-インストール後、Claude Code内で自然に使えます。「サイトの見せ方を改善したい」「技術メモから外向けコンテンツを作りたい」などと伝えると、このSkillが起動します。
+または、ローカルで試す場合:
+
+```bash
+git clone https://github.com/nakamoto-masa/deep-reframe.git
+claude --plugin-dir ./deep-reframe
+```
+
+インストール後、「サイトの見せ方を改善したい」「技術メモから外向けコンテンツを作りたい」などと伝えると、このSkillが起動します。
 
 ## 想定ユーザー
 
