@@ -1,23 +1,23 @@
 ---
 name: deep-reframe
-description: Reframe deep tech messaging from technology-centric to value-centric. Use when a user wants to improve how their technology is presented — website copy, case study titles, service descriptions, pitch decks, mission statements, or any outward-facing text. Guides users through diagnosis of current messaging maturity and transforms it to emphasize customer value and business outcomes. Trigger when user mentions rewriting tech messaging, improving positioning, fixing website copy, creating customer-facing content from technical notes, or making their technology story more compelling.
+description: Reframe deep tech messaging from technology-centric to value-centric. Accepts any source material — repositories, websites, technical notes, proposals, pitch decks — and guides users through diagnosis of current messaging maturity, rewriting, and verification. Trigger when user mentions rewriting tech messaging, improving positioning, fixing website copy, creating customer-facing content from a repo or technical notes, or making their technology story more compelling.
 ---
 
 # Deep Reframe — ディープテック・メッセージング変換
 
-ディープテック企業の技術者が、自社技術の「見せ方」を継続的に改善するためのSkill。技術メモや既存テキストを入力すると、対話的にガイドしながら価値創造のメッセージングに変換する。
+ディープテック企業の技術者が、自社技術の「見せ方」を継続的に改善するためのSkill。リポジトリ・サイト・技術メモなど素材を渡すと、対話的にガイドしながら価値創造のメッセージングに変換する。
 
 ## このワークフローを提案するタイミング
 
 **トリガー条件:**
 - 技術者がウェブサイトのコピー、事例記事、サービス説明、MISSION文などの改善を求めている
-- 技術メモや打ち合わせメモから外向けコンテンツを作りたい
+- リポジトリや技術メモから外向けコンテンツを作りたい
 - 「見せ方を変えたい」「伝わらない」「技術の価値が伝わっていない」
 
 **最初の提案:**
 以下の4ステージで進めることを提案する:
 
-1. **ヒアリング**: 技術・素材・現状のテキストを受け取り、質問しながらコンテキストを集める
+1. **ヒアリング**: リポジトリ・サイト・メモなど素材を受け取り、質問しながらコンテキストを集める
 2. **診断**: メッセージングの成熟度と問題パターンを特定する
 3. **変換**: フレームワークに基づいて書き換え案を複数提示する
 4. **検証**: 書き換え後のテキストが読者に正しく伝わるかテストする
@@ -32,7 +32,7 @@ description: Reframe deep tech messaging from technology-centric to value-centri
 
 ### 素材から自動抽出する情報
 
-素材（サイト、資料、メモ等）を受け取ったら、まず以下を自分で読み取る:
+素材（リポジトリ、サイト、資料、メモ等）を受け取ったら、まず以下を自分で読み取る:
 
 - 技術の概要（何をする技術か）
 - 現在のメッセージング（MISSION、タグライン、サービス名、事例タイトル等）
@@ -53,11 +53,10 @@ description: Reframe deep tech messaging from technology-centric to value-centri
 ### 素材の受け取り
 
 ユーザーが提供する素材の形式は問わない:
-- ウェブサイトのURL（Playwrightで取得可能なら取得する）
-- コピペされたテキスト
-- 技術メモ・打ち合わせメモ
-- リポジトリ内のファイル
-- 「こういうことを伝えたい」という口頭説明
+- テキスト: 技術メモ、打ち合わせメモ、論文、提案書、ピッチ資料など
+- URL: ウェブサイトやブログ記事（Playwrightで取得可能なら取得する）
+- リポジトリ: README、ドキュメント、コードから技術の本質を読み取る
+- チャット: 「こういうことを伝えたい」という説明だけでもOK
 
 **素材を受け取ったら:**
 - 内容を理解し、不明点を質問する
