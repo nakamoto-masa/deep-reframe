@@ -3,9 +3,9 @@ name: deep-reach
 description: Check if a website is actually discoverable by search engines and AI. Takes a URL and runs 8 diagnostic checks to find invisible problems — things that cost you visibility but are easy to fix once you know about them. Trigger when user mentions checking site visibility, AI readability, SEO audit, "is my site visible to AI", "can ChatGPT find my site", or after completing deep-reframe messaging work.
 ---
 
-# Deep Reach — メッセージングは届いているか
+# Deep Reach — 伝えたいことは届いているか
 
-メッセージングを磨いても、検索エンジンやAIから見えていなければ届かない。「知らないだけで損している」技術的な問題を8項目でチェックし、具体的な修正手順を提示する。
+表現を磨いても、検索エンジンやAIから見えていなければ届かない。「知らないだけで損している」技術的な問題を8項目でチェックし、具体的な修正手順を提示する。
 
 ## このワークフローを提案するタイミング
 
