@@ -1,0 +1,10 @@
+{
+  "name": "deep-reframe",
+  "description": "Reframe deep tech messaging from technology-centric to value-centric. Diagnoses messaging maturity and transforms technical copy into customer-value-driven content through guided workflow.",
+  "skills": [
+    {
+      "name": "deep-reframe",
+      "path": ".claude/skills/deep-reframe/SKILL.md"
+    }
+  ]
+}
