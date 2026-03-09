@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "skill_name": "deep-reframe",
+    "skill_path": "/Users/masahiro/repos/deep-reframe/skills/deep-reframe",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-10T11:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1,
+    "expectations_version": "v3-rubric-1-5"
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "biotech-tagline",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 4.0,
+        "total_score": 36,
+        "max_score": 45,
+        "expectations_count": 9,
+        "score_distribution": {"5": 0, "4": 9, "3": 0, "2": 0, "1": 0}
+      }
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "biotech-tagline",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 2.4,
+        "total_score": 22,
+        "max_score": 45,
+        "expectations_count": 9,
+        "score_distribution": {"5": 0, "4": 0, "3": 4, "2": 5, "1": 0}
+      }
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "materials-casestudy",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 4.1,
+        "total_score": 33,
+        "max_score": 40,
+        "expectations_count": 8,
+        "score_distribution": {"5": 1, "4": 7, "3": 0, "2": 0, "1": 0}
+      }
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "materials-casestudy",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 2.1,
+        "total_score": 17,
+        "max_score": 40,
+        "expectations_count": 8,
+        "score_distribution": {"5": 0, "4": 0, "3": 3, "2": 4, "1": 1}
+      }
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "robotics-landing",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 4.1,
+        "total_score": 33,
+        "max_score": 40,
+        "expectations_count": 8,
+        "score_distribution": {"5": 1, "4": 7, "3": 0, "2": 0, "1": 0}
+      }
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "robotics-landing",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 2.6,
+        "total_score": 21,
+        "max_score": 40,
+        "expectations_count": 8,
+        "score_distribution": {"5": 0, "4": 0, "3": 5, "2": 3, "1": 0}
+      }
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "mean_score": {"mean": 4.1, "min": 4.0, "max": 4.1},
+      "score_at_5": 2,
+      "score_at_4": 23,
+      "score_at_3": 0,
+      "total_expectations": 25
+    },
+    "without_skill": {
+      "mean_score": {"mean": 2.4, "min": 2.1, "max": 2.6},
+      "score_at_5": 0,
+      "score_at_4": 0,
+      "score_at_3": 12,
+      "total_expectations": 25
+    },
+    "delta": {
+      "mean_score": "+1.7"
+    }
+  },
+  "analysis": {
+    "with_skill_improvement_areas": [
+      {
+        "area": "5点が取れていない項目（4点止まり）",
+        "details": "25項目中23項目が4点。読者の「認知→感情→行動」の一連の変化が設計されているレベル（5点）に達していない",
+        "specific_gaps": [
+          "Phase 3の表現力: 方向性Bの成果データがPhase 2的語り方のまま（eval 1）、A社タイトルの「実験回数削減」がPhase 2的（eval 2）",
+          "意思決定者の行動喚起: 「なぜ今動くべきか」の緊迫感が方向性A以外では弱い",
+          "効果説明の読者視点度: 認知→感情は描写されているが、→行動の明示的設計がない",
+          "ファーストビューの引力: 日常課題+業界変化はあるが、読者の感情（恐れ、焦り）に直接触れていない",
+          "顧客課題の具体性: 課題の列挙はあるが、読者の感情レベルの共感がない"
+        ]
+      }
+    ],
+    "without_skill_weakness_patterns": [
+      {"pattern": "Phase 3の表現力が2点（Phase 2支配的）", "frequency": "3/3 evals"},
+      {"pattern": "方向性の質的差異が2点（抽象的・重複あり）", "frequency": "2/3 evals"},
+      {"pattern": "効果説明が2点（表現特徴の記述にとどまる）", "frequency": "3/3 evals"},
+      {"pattern": "技術手法名・バズワードが1-2点（多数残存）", "frequency": "2/3 evals"},
+      {"pattern": "フレームワーク活用が2点（言及なし）", "frequency": "1/1 eval (landing page)"}
+    ],
+    "5_point_items": [
+      {"eval": "materials-casestudy", "item": "事例タイトルの成果伝達", "why": "A社の劇的削減とB社の不可能実現が即座に伝わり、読者が「読むべき事例」と判断できるフックがある"},
+      {"eval": "robotics-landing", "item": "フレームワーク活用度", "why": "テンプレートA/B、Dunford/Raskin、3層を組み合わせ、各構成案の理論的根拠が説明されている"}
+    ]
+  },
+  "notes": [
+    "v3: 1-5点ルーブリック評価（v2のPASS/FAILから変更）",
+    "with_skill: 平均4.1/5 — 4点が主体で5点は25項目中2項目のみ",
+    "without_skill: 平均2.4/5 — 3点と2点が混在",
+    "Delta: +1.7点 — スキルの効果は明確",
+    "with_skillの改善余地: 4→5のギャップは主に「読者の感情への直接的なアプローチ」「行動変化の明示的設計」「全方向性でのPhase 3統一」",
+    "スキル改善の最優先: Phase 3表現の一貫性（成果データをPhase 2語りのまま提示する傾向がある）"
+  ]
+}
