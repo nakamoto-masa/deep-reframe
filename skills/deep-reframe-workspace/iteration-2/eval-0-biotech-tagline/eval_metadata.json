@@ -1,0 +1,6 @@
+{
+  "eval_id": 0,
+  "eval_name": "biotech-tagline",
+  "prompt": "Stage 1-2の結果からStage 3を実行。MolAxis株式会社のタグライン（方向性3つ×3案）と会社説明3案を生成。",
+  "assertions": []
+}

@@ -1,0 +1,6 @@
+{
+  "eval_id": 2,
+  "eval_name": "robotics-landing",
+  "prompt": "Stage 1-2の結果からStage 3を実行。InspectaVision株式会社のサービス紹介ページ構成案を2-3案提示。",
+  "assertions": []
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "skill_name": "deep-reframe",
+    "skill_path": "/Users/masahiro/repos/deep-reframe/skills/deep-reframe",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-11T10:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1,
+    "expectations_version": "v3-rubric-1-5",
+    "note": "iteration-2: Writer sub-agent (division-of-labor). Baseline from iteration-1 (single-agent)."
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "biotech-tagline",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 4.44,
+        "total_score": 40,
+        "max_score": 45,
+        "expectations_count": 9,
+        "score_distribution": {"5": 4, "4": 5, "3": 0, "2": 0, "1": 0}
+      },
+      "timing": {
+        "total_tokens": 19142,
+        "duration_ms": 63067
+      }
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "biotech-tagline",
+      "configuration": "iteration-1_with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 4.0,
+        "total_score": 36,
+        "max_score": 45,
+        "expectations_count": 9,
+        "score_distribution": {"5": 0, "4": 9, "3": 0, "2": 0, "1": 0}
+      }
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "materials-casestudy",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 3.875,
+        "total_score": 31,
+        "max_score": 40,
+        "expectations_count": 8,
+        "score_distribution": {"5": 0, "4": 7, "3": 1, "2": 0, "1": 0}
+      },
+      "timing": {
+        "total_tokens": 18995,
+        "duration_ms": 56639
+      }
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "materials-casestudy",
+      "configuration": "iteration-1_with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 4.1,
+        "total_score": 33,
+        "max_score": 40,
+        "expectations_count": 8,
+        "score_distribution": {"5": 1, "4": 7, "3": 0, "2": 0, "1": 0}
+      }
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "robotics-landing",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 4.25,
+        "total_score": 34,
+        "max_score": 40,
+        "expectations_count": 8,
+        "score_distribution": {"5": 2, "4": 6, "3": 0, "2": 0, "1": 0}
+      },
+      "timing": {
+        "total_tokens": 18910,
+        "duration_ms": 74257
+      }
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "robotics-landing",
+      "configuration": "iteration-1_with_skill",
+      "run_number": 1,
+      "result": {
+        "mean_score": 4.1,
+        "total_score": 33,
+        "max_score": 40,
+        "expectations_count": 8,
+        "score_distribution": {"5": 1, "4": 7, "3": 0, "2": 0, "1": 0}
+      }
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "mean_score": {"mean": 4.19, "min": 3.875, "max": 4.44},
+      "score_at_5": 6,
+      "score_at_4": 18,
+      "score_at_3": 1,
+      "total_expectations": 25,
+      "timing": {
+        "mean_tokens": 19016,
+        "mean_duration_ms": 64654
+      }
+    },
+    "iteration-1_with_skill": {
+      "mean_score": {"mean": 4.08, "min": 4.0, "max": 4.1},
+      "score_at_5": 2,
+      "score_at_4": 23,
+      "score_at_3": 0,
+      "total_expectations": 25
+    },
+    "delta": {
+      "mean_score": "+0.11",
+      "score_at_5_change": "+4",
+      "score_at_3_change": "+1"
+    }
+  },
+  "analysis": {
+    "improvements": [
+      {
+        "area": "5点項目の増加",
+        "details": "iteration-1の2項目→iteration-2の6項目。特にbiotech-taglineで4項目が5点に到達（事業内容の伝達力、Phase 3の表現力、方向性の質的差異、バズワード排除）"
+      },
+      {
+        "area": "biotech-tagline全体の向上",
+        "details": "4.0→4.44（+0.44）。全9項目が4点だったiteration-1に対し、4項目が5点に到達。「探す→設計する」の対比構造がPhase 3表現として高評価"
+      },
+      {
+        "area": "robotics-landingの微増",
+        "details": "4.1→4.25（+0.15）。3層メッセージングの統合度とフレームワーク活用度が5点に"
+      }
+    ],
+    "regressions": [
+      {
+        "area": "materials-casestudyの低下",
+        "details": "4.1→3.875（-0.225）。「技術手法名・テンプレート表現の排除」が3点（iteration-1では4点相当）。方向性の見出しに「Category Design」「Raskin的パラダイムシフト」「Dunford的価値訴求」とフレームワーク名がそのまま露出",
+        "root_cause": "Writer sub-agentがWriting Briefのフレームワーク名をそのまま見出しに使った。認知バイアス分離（診断の思考過程を渡さない）は機能しているが、Writing Briefに含まれるフレームワーク名の取り扱い指示が不足",
+        "fix_suggestion": "writer.mdに「フレームワーク名・理論名は成果物の見出しや本文に露出させない」旨の指示を追加"
+      }
+    ],
+    "overall_assessment": "分業態勢（Writer sub-agent）は全体として微増（+0.11）。5点項目の増加（2→6）は明確な改善。ただし1ケースで回帰が発生しており、フレームワーク名の漏出を防ぐ指示の追加が必要。n=1のため、スコア差がアーキテクチャの効果か偶然の分散かは判別困難。"
+  }
+}
