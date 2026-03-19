@@ -1,8 +1,6 @@
 # deep-reframe
 
-ディープテック企業の技術の"伝わらない"を解決する Agent Skill
-
-リポジトリ・サイト・技術メモなど素材を渡すと、技術の価値が伝わる表現に磨き上げる。
+ディープテック企業の技術の「見せ方」を作り・磨き上げる Agent Skill — コードレビュー感覚で
 
 - 「何か資料ある？」と聞かれて送れるものがない → 渡せるコンテンツが手に入る
 - 会うたびにゼロから説明している → 「サイト見ました、あれいいですね」から始まる打ち合わせに
@@ -21,19 +19,29 @@
 
 ## インストール
 
-Claude Code内で以下を実行:
+プラグインとしてインストール:
 
-```
-/plugin marketplace add nakamoto-masa/deep-reframe
-/plugin install deep-reframe@deep-reframe
-```
+1. プラグインを追加:
+    ```
+    /plugin marketplace add nakamoto-masa/deep-reframe
+    ```
 
-または、ローカルで試す場合:
+2. スキルをインストール:
+    ```
+    /plugin install deep-reframe@deep-reframe
+    ```
 
-```bash
-git clone https://github.com/nakamoto-masa/deep-reframe.git
-claude --plugin-dir ./deep-reframe
-```
+インストールせずに試したい場合（セッション中のみ有効）:
+
+1. リポジトリをクローン:
+    ```bash
+    git clone https://github.com/nakamoto-masa/deep-reframe.git
+    ```
+
+2. プラグインディレクトリを指定して起動:
+    ```bash
+    claude --plugin-dir ./deep-reframe
+    ```
 
 インストール後、「サイトの見せ方を改善したい」「技術メモから外向けコンテンツを作りたい」などと伝えると、このSkillが起動します。
 
